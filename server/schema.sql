@@ -32,8 +32,8 @@ create table rooms (
   PRIMARY KEY(id)
 );
 
--- ALTER TABLE messages ADD FOREIGN KEY (id) REFERENCES users (id);
--- ALTER TABLE messages ADD FOREIGN KEY (id) REFERENCES rooms (id);
+ALTER TABLE messages ADD FOREIGN KEY (user_id) REFERENCES users (id);
+ALTER TABLE messages ADD FOREIGN KEY (room_id) REFERENCES rooms (id);
 
 
 /* Create other tables and define schemas for them here! */
