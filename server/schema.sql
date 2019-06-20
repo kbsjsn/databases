@@ -1,7 +1,11 @@
+DROP DATABASE IF EXISTS chat;
+-- DROP TABLE IF EXISTS chat;
+
 CREATE DATABASE chat;
 
-
 USE chat;
+
+
 
 DROP TABLE IF EXISTS messages;
 
@@ -28,8 +32,9 @@ create table rooms (
   PRIMARY KEY(id)
 );
 
-ALTER TABLE messages ADD FOREIGN KEY (id) REFERENCES users (id);
-ALTER TABLE messages ADD FOREIGN KEY (id) REFERENCES rooms (id);
+-- ALTER TABLE messages ADD FOREIGN KEY (id) REFERENCES users (id);
+-- ALTER TABLE messages ADD FOREIGN KEY (id) REFERENCES rooms (id);
+
 
 /* Create other tables and define schemas for them here! */
 
